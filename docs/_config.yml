@@ -1,7 +1,6 @@
 title: kutils 技术文档
 baseurl: "/kutils/docs"
 markdown: kramdown
-theme: minima
 permalink: pretty
 plugins:
   - jekyll-feed
