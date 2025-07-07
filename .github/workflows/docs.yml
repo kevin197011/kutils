@@ -17,17 +17,17 @@ jobs:
           bundler-cache: true
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
-      # - name: Generate docs (API/USAGE)
-      #   run: |
-      #     mkdir -p public
-      #     cp docs/API.md public/
-      #     cp docs/USAGE.md public/
-      #     mkdir -p public/yardoc
-      #     cp docs/API.md public/yardoc/
-      #     cp docs/USAGE.md public/yardoc/
-      - name: Generate YARD API docs
+      - name: Build YARD API docs
         run: |
-          bundle exec yard doc --output-dir public
+          bundle exec yard doc --output-dir public/yardoc
+      - name: Build Jekyll Markdown docs
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          gem install jekyll bundler
+          cd docs
+          bundle install
+          bundle exec jekyll build -d ../public/docs
+          cd ..
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

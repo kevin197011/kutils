@@ -7,6 +7,13 @@
 
 ---
 
+## 📚 文档导航
+
+- [API 文档（YARD，Ruby 源码自动生成）](https://kevin197011.github.io/kutils/yardoc/)
+- [技术文档（Markdown，Jekyll 极客风格）](https://kevin197011.github.io/kutils/docs/)
+
+---
+
 ## 项目简介
 
 Kutils 是一个现代 Ruby 通用工具库，涵盖字符串、时间、文件、加解密、数组、验证、调试、DSL、格式化等常用场景，全部模块统一挂载于 `Kutils` 命名空间，极易集成与扩展。支持自动化测试、文档、CI/CD、安全扫描与 Gem 发布。
@@ -56,13 +63,13 @@ Kutils::DSLBuilder.new { task('deploy') { puts 'Deploying...' } }
 puts Kutils::FormatUtils.markdown_title('Hello')
 ```
 
-更多用法见 [USAGE.md](USAGE.md)
+更多用法见 [USAGE.md](docs/USAGE.md)
 
 ---
 
 ## API 文档
 
-- [API 参考 (Markdown)](API.md)
+- [API 参考 (Markdown)](docs/API.md)
 
 ---
 
@@ -75,7 +82,7 @@ puts Kutils::FormatUtils.markdown_title('Hello')
 
 本地运行：
 
-```sh
+```ruby
 bundle exec rspec      # 运行所有测试
 bundle exec rubocop    # 代码规范检查
 rake yard              # 生成 API 文档
