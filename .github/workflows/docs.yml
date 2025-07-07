@@ -27,7 +27,7 @@ jobs:
       #     cp docs/USAGE.md public/yardoc/
       - name: Generate YARD API docs
         run: |
-          bundle exec yard doc --output-dir public/yardoc
+          bundle exec yard doc --output-dir public
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
