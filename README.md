@@ -56,13 +56,13 @@ Kutils::DSLBuilder.new { task('deploy') { puts 'Deploying...' } }
 puts Kutils::FormatUtils.markdown_title('Hello')
 ```
 
-更多用法见 [docs/USAGE.md](docs/USAGE.md)
+更多用法见 [USAGE.md](USAGE.md)
 
 ---
 
 ## API 文档
 
-- [API 参考 (Markdown)](docs/API.md)
+- [API 参考 (Markdown)](API.md)
 
 ---
 
