@@ -17,14 +17,14 @@ jobs:
           bundler-cache: true
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
-      - name: Generate docs (API/USAGE)
-        run: |
-          mkdir -p public
-          cp docs/API.md public/
-          cp docs/USAGE.md public/
-          mkdir -p public/yardoc
-          cp docs/API.md public/yardoc/
-          cp docs/USAGE.md public/yardoc/
+      # - name: Generate docs (API/USAGE)
+      #   run: |
+      #     mkdir -p public
+      #     cp docs/API.md public/
+      #     cp docs/USAGE.md public/
+      #     mkdir -p public/yardoc
+      #     cp docs/API.md public/yardoc/
+      #     cp docs/USAGE.md public/yardoc/
       - name: Generate YARD API docs
         run: |
           bundle exec yard doc --output-dir public/yardoc
