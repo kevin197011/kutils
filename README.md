@@ -1,5 +1,8 @@
 # kutils
 
+[![Gem Version](https://img.shields.io/gem/v/kutils)](https://rubygems.org/gems/kutils)
+[![CI](https://github.com/kevin197011/kutils/actions/workflows/docs.yml/badge.svg)](https://github.com/kevin197011/kutils/actions/workflows/docs.yml)
+
 > Ruby 通用工具库 —— 统一命名空间、极简高效、自动化工程最佳实践
 
 ---
@@ -24,7 +27,7 @@ Kutils 是一个现代 Ruby 通用工具库，涵盖字符串、时间、文件�
 ## 安装
 
 ```sh
-git clone https://github.com/kk/kutils.git
+git clone https://github.com/kevin197011/kutils.git
 cd kutils
 bundle install
 ```
@@ -32,7 +35,7 @@ bundle install
 或在你的 Gemfile 中添加（发布后）：
 
 ```ruby
-gem 'kutils', git: 'https://github.com/kk/kutils.git'
+gem 'kutils', git: 'https://github.com/kevin197011/kutils.git'
 ```
 
 ---
@@ -60,7 +63,6 @@ puts Kutils::FormatUtils.markdown_title('Hello')
 ## API 文档
 
 - [API 参考 (Markdown)](docs/API.md)
-- [自动化 YARD API 文档（支持黑白主题切换）](https://your-gh-pages-url/yardoc/index.html)
 
 ---
 

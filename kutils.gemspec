@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['kk@example.com']
   spec.summary       = 'A collection of geek-style Ruby utility modules.'
   spec.description   = 'String, time, file, crypto, array, validation, debug, DSL, formatting and more.'
-  spec.homepage      = 'https://github.com/kk/kutils'
+  spec.homepage      = 'https://github.com/kevin197011/kutils'
   spec.license       = 'MIT'
 
   spec.required_ruby_version = '>= 2.7.0'
