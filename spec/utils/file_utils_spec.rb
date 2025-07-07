@@ -2,15 +2,15 @@
 require 'spec_helper'
 require 'tmpdir'
 
-describe FileUtils do
+describe Kutils::FileUtils do
   it 'safe_read returns nil for non-existent file' do
-    expect(FileUtils.safe_read('no_such_file.txt')).to be_nil
+    expect(Kutils::FileUtils.safe_read('no_such_file.txt')).to be_nil
   end
 
   it 'safe_read returns content for existing file' do
     file = 'tmp_test.txt'
     File.write(file, 'hello')
-    expect(FileUtils.safe_read(file)).to eq('hello')
+    expect(Kutils::FileUtils.safe_read(file)).to eq('hello')
     File.delete(file)
   end
 
@@ -18,7 +18,7 @@ describe FileUtils do
     Dir.mktmpdir do |dir|
       subdir = File.join(dir, 'foo')
       expect(Dir.exist?(subdir)).to be false
-      FileUtils.mkdir_p(subdir)
+      Kutils::FileUtils.mkdir_p(subdir)
       expect(Dir.exist?(subdir)).to be true
     end
   end

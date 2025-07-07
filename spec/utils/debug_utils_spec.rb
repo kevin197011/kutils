@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 require 'spec_helper'
 
-describe DebugUtils do
+describe Kutils::DebugUtils do
   it 'log prints object without error' do
-    expect { DebugUtils.log({foo: 1}, 'test') }.not_to raise_error
+    expect { Kutils::DebugUtils.log({foo: 1}, 'test') }.not_to raise_error
   end
 end
