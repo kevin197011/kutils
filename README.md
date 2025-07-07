@@ -26,7 +26,7 @@ Kutils 是一个现代 Ruby 通用工具库，涵盖字符串、时间、文件�
 
 ## 安装
 
-```sh
+```ruby
 git clone https://github.com/kevin197011/kutils.git
 cd kutils
 bundle install
@@ -35,7 +35,7 @@ bundle install
 或在你的 Gemfile 中添加（发布后）：
 
 ```ruby
-gem 'kutils', git: 'https://github.com/kevin197011/kutils.git'
+gem 'kutils'
 ```
 
 ---
