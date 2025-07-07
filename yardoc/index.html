@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="file_list.html?1"></iframe>
+      <iframe id="nav" src="class_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -68,13 +68,22 @@
 
 <hr />
 
-<h2 id="section">项目简介</h2>
+<h2 id="section">📚 文档导航</h2>
+
+<ul>
+  <li><a href="https://kevin197011.github.io/kutils/yardoc/">API 文档（YARD，Ruby 源码自动生成）</a></li>
+  <li><a href="https://kevin197011.github.io/kutils/docs/">技术文档（Markdown，Jekyll 极客风格）</a></li>
+</ul>
+
+<hr />
+
+<h2 id="section-1">项目简介</h2>
 
 <p>Kutils 是一个现代 Ruby 通用工具库，涵盖字符串、时间、文件、加解密、数组、验证、调试、DSL、格式化等常用场景，全部模块统一挂载于 <code>Kutils</code> 命名空间，极易集成与扩展。支持自动化测试、文档、CI/CD、安全扫描与 Gem 发布。</p>
 
 <hr />
 
-<h2 id="section-1">特性</h2>
+<h2 id="section-2">特性</h2>
 
 <ul>
   <li>统一命名空间：<code>Kutils::模块名.方法</code></li>
@@ -87,7 +96,7 @@
 
 <hr />
 
-<h2 id="section-2">安装</h2>
+<h2 id="section-3">安装</h2>
 
 <p><code>ruby
 git clone https://github.com/kevin197011/kutils.git
@@ -103,7 +112,7 @@ gem 'kutils'
 
 <hr />
 
-<h2 id="section-3">用法示例</h2>
+<h2 id="section-4">用法示例</h2>
 
 <p>```ruby
 require ‘kutils’</p>
@@ -119,19 +128,19 @@ Kutils::DSLBuilder.new { task(‘deploy’) { puts ‘Deploying…’ } }
 puts Kutils::FormatUtils.markdown_title(‘Hello’)
 ```</p>
 
-<p>更多用法见 <a href="USAGE.md">USAGE.md</a></p>
+<p>更多用法见 <a href="docs/USAGE.md">USAGE.md</a></p>
 
 <hr />
 
 <h2 id="api-">API 文档</h2>
 
 <ul>
-  <li><a href="API.md">API 参考 (Markdown)</a></li>
+  <li><a href="docs/API.md">API 参考 (Markdown)</a></li>
 </ul>
 
 <hr />
 
-<h2 id="section-4">测试与质量保障</h2>
+<h2 id="section-5">测试与质量保障</h2>
 
 <ul>
   <li>RSpec 单元测试覆盖所有模块</li>
@@ -142,7 +151,7 @@ puts Kutils::FormatUtils.markdown_title(‘Hello’)
 
 <p>本地运行：</p>
 
-<p><code>sh
+<p><code>ruby
 bundle exec rspec      # 运行所有测试
 bundle exec rubocop    # 代码规范检查
 rake yard              # 生成 API 文档
@@ -150,7 +159,7 @@ rake yard              # 生成 API 文档
 
 <hr />
 
-<h2 id="section-5">贡献指南</h2>
+<h2 id="section-6">贡献指南</h2>
 
 <p>欢迎 PR、Issue 及建议！</p>
 
@@ -163,13 +172,13 @@ rake yard              # 生成 API 文档
 
 <hr />
 
-<h2 id="section-6">许可证</h2>
+<h2 id="section-7">许可证</h2>
 
 <p>MIT License. © 2025 kk</p>
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jul  7 11:52:16 2025 by
+  Generated on Mon Jul  7 12:20:09 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.2.8).
 </div>
