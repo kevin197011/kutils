@@ -1,3 +1,8 @@
+---
+layout: default
+title: 用法示例 USAGE
+---
+
 # Kutils 用法示例
 
 本文件展示 Kutils 各工具模块的典型用法，便于开发者快速集成与测试。
