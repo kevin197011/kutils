@@ -9,8 +9,7 @@
 
 ## 📚 文档导航
 
-- [API 文档（YARD，Ruby 源码自动生成）](https://kevin197011.github.io/kutils/yardoc/)
-- [技术文档（Markdown，Jekyll ）](https://kevin197011.github.io/kutils/docs/)
+- [API 文档（YARD，Ruby 源码自动生成）](https://kevin197011.github.io/kutils)
 
 ---
 
@@ -62,15 +61,6 @@ Kutils::DebugUtils.log({foo: 1})
 Kutils::DSLBuilder.new { task('deploy') { puts 'Deploying...' } }
 puts Kutils::FormatUtils.markdown_title('Hello')
 ```
-
-更多用法见 [USAGE.md](docs/USAGE.md)
-
----
-
-## API 文档
-
-- [API 参考 (Markdown)](docs/API.md)
-
 ---
 
 ## 测试与质量保障

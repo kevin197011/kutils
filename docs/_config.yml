@@ -1,4 +1,4 @@
-title: kutils 技术文档
+title: kutils Wiki
 baseurl: "/kutils/docs"
 markdown: kramdown
 theme: minima
@@ -8,6 +8,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-toc
 exclude: ["yardoc", "Gemfile", "Gemfile.lock"]
 highlighter: rouge
 kramdown:
