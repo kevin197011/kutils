@@ -16,7 +16,6 @@ group :development do
   gem 'yard', '~> 0.9'
   # Jekyll 及常用插件
   gem 'jekyll', '~> 4.3'
-  gem 'minima', '~> 2.5'
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
