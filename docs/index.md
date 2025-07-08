@@ -5,7 +5,7 @@ title: kutils 技术文档
 
 # kutils 技术文档
 
-> 极简 · 极客 · Ruby 工具库
+>  · Ruby 工具库
 
 ---
 
