@@ -1,0 +1,14 @@
+<aside class="vp-sidebar">
+  <nav>
+    {% for section in site.data.sidebar %}
+      <div class="vp-sidebar-section">
+        <div class="vp-sidebar-title">{{ section.title }}</div>
+        <ul>
+          {% for item in section.items %}
+            <li><a href="{{ item.link }}">{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </nav>
+</aside>

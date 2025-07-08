@@ -19,7 +19,7 @@ jobs:
         run: bundle install --jobs 4 --retry 3
       - name: Build YARD API docs
         run: |
-          bundle exec yard doc --output-dir public
+          bundle exec yard doc --output-dir public/yard
       - name: Build Jekyll Markdown docs
         run: |
           bundle config set --local path 'vendor/bundle'

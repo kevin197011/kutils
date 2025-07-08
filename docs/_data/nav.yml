@@ -1,0 +1,10 @@
+- text: 首页
+  link: /kutils/docs/
+- text: 用法
+  link: /kutils/docs/USAGE
+- text: API
+  link: /kutils/docs/API
+- text: 归档
+  link: /kutils/docs/archive.html
+- text: GitHub
+  link: https://github.com/kevin197011/kutils

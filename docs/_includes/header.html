@@ -1,0 +1,11 @@
+<header class="vp-header">
+  <div class="vp-header-inner">
+    <a class="vp-logo" href="{{ '/' | relative_url }}">kutils</a>
+    <nav class="vp-nav">
+      {% for item in site.data.nav %}
+        <a href="{{ item.link }}">{{ item.text }}</a>
+      {% endfor %}
+    </nav>
+    <button class="vp-theme-toggle" id="theme-toggle" title="切换主题">🌓</button>
+  </div>
+</header>

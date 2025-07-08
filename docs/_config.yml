@@ -1,14 +1,13 @@
 title: kutils Wiki
 baseurl: "/kutils/docs"
 markdown: kramdown
-theme: minima
 permalink: pretty
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-toc
 exclude: ["yardoc", "Gemfile", "Gemfile.lock"]
 highlighter: rouge
 kramdown:

@@ -9,25 +9,35 @@ title: kutils Wiki
 
 ---
 
-## 📚 目录
+## 📚 主要导航
 
-* [用法示例 USAGE](USAGE)
-* [API 参考 API](API)
-* [返回项目首页](https://github.com/kevin197011/kutils)
+- [用法示例 USAGE](/kutils/docs/USAGE)
+- [API 参考 API](/kutils/docs/API)
+- [返回项目首页](https://github.com/kevin197011/kutils)
 
 ---
 
 ## 主要模块
 
-- [StringUtils](API#kutilsstringutils)
-- [TimeUtils](API#kutilstimeutils)
-- [FileUtils](API#kutilsfileutils)
-- [CryptoUtils](API#kutilscryptoutils)
-- [ArrayUtils](API#kutilsarrayutils)
-- [Validator](API#kutilsvalidator)
-- [DebugUtils](API#kutilsdebugutils)
-- [DSLBuilder](API#kutilsdslbuilder)
-- [FormatUtils](API#kutilsformatutils)
+- [StringUtils](/kutils/docs/API#kutilsstringutils)
+- [TimeUtils](/kutils/docs/API#kutilstimeutils)
+- [FileUtils](/kutils/docs/API#kutilsfileutils)
+- [CryptoUtils](/kutils/docs/API#kutilscryptoutils)
+- [ArrayUtils](/kutils/docs/API#kutilsarrayutils)
+- [Validator](/kutils/docs/API#kutilsvalidator)
+- [DebugUtils](/kutils/docs/API#kutilsdebugutils)
+- [DSLBuilder](/kutils/docs/API#kutilsdslbuilder)
+- [FormatUtils](/kutils/docs/API#kutilsformatutils)
+
+---
+
+## 📝 最新文档
+
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: '%Y-%m-%d' }}</small></li>
+  {% endfor %}
+</ul>
 
 ---
 
