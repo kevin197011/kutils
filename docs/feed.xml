@@ -1,1 +1,308 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/kutils/docs/feed.xml" rel="self" type="application/atom+xml" /><link href="/kutils/docs/" rel="alternate" type="text/html" /><updated>2025-07-08T01:59:48+00:00</updated><id>/kutils/docs/feed.xml</id><title type="html">kutils Wiki</title></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="/kutils/docs/feed.xml" rel="self" type="application/atom+xml" /><link href="/kutils/docs/" rel="alternate" type="text/html" /><updated>2025-07-08T04:16:28+00:00</updated><id>/kutils/docs/feed.xml</id><title type="html">kutils Wiki</title><entry><title type="html">API 参考</title><link href="/kutils/docs/wiki/2025/07/07/api/" rel="alternate" type="text/html" title="API 参考" /><published>2025-07-07T04:00:00+00:00</published><updated>2025-07-07T04:00:00+00:00</updated><id>/kutils/docs/wiki/2025/07/07/api</id><content type="html" xml:base="/kutils/docs/wiki/2025/07/07/api/"><![CDATA[<h1 id="api-参考">API 参考</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#api-参考" id="markdown-toc-api-参考">API 参考</a>    <ul>
+      <li><a href="#kutilsstringutils" id="markdown-toc-kutilsstringutils">Kutils::StringUtils</a></li>
+      <li><a href="#kutilstimeutils" id="markdown-toc-kutilstimeutils">Kutils::TimeUtils</a></li>
+      <li><a href="#kutilsfileutils" id="markdown-toc-kutilsfileutils">Kutils::FileUtils</a></li>
+      <li><a href="#kutilscryptoutils" id="markdown-toc-kutilscryptoutils">Kutils::CryptoUtils</a></li>
+      <li><a href="#kutilsarrayutils" id="markdown-toc-kutilsarrayutils">Kutils::ArrayUtils</a></li>
+      <li><a href="#kutilsvalidator" id="markdown-toc-kutilsvalidator">Kutils::Validator</a></li>
+      <li><a href="#kutilsdebugutils" id="markdown-toc-kutilsdebugutils">Kutils::DebugUtils</a></li>
+      <li><a href="#kutilsdslbuilder" id="markdown-toc-kutilsdslbuilder">Kutils::DSLBuilder</a></li>
+      <li><a href="#kutilsformatutils" id="markdown-toc-kutilsformatutils">Kutils::FormatUtils</a></li>
+      <li><a href="#kutilsversion" id="markdown-toc-kutilsversion">Kutils::VERSION</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>本文件自动汇总 Kutils 各工具模块的公开方法、参数、返回值及简要说明，便于开发者查阅。</p>
+
+<hr />
+
+<h2 id="kutilsstringutils">Kutils::StringUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::StringUtils.camelize(str)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">str</code> [String] - 下划线字符串</li>
+      <li>返回：CamelCase 字符串 [String]</li>
+      <li>说明：下划线转驼峰</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::StringUtils.underscore(str)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">str</code> [String] - 驼峰或 kebab 字符串</li>
+      <li>返回：snake_case 字符串 [String]</li>
+      <li>说明：驼峰/短横线转下划线</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::StringUtils.slugify(str)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">str</code> [String]</li>
+      <li>返回：URL slug 字符串 [String]</li>
+      <li>说明：转为小写、短横线、去除特殊字符</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilstimeutils">Kutils::TimeUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::TimeUtils.now_iso8601</code>
+    <ul>
+      <li>返回：当前 UTC 时间的 ISO8601 字符串 [String]</li>
+      <li>说明：获取当前时间</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::TimeUtils.human_duration(seconds)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">seconds</code> [Integer]</li>
+      <li>返回：HH:MM:SS 格式字符串 [String]</li>
+      <li>说明：秒数转人类可读时长</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsfileutils">Kutils::FileUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::FileUtils.safe_read(path)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">path</code> [String]</li>
+      <li>返回：文件内容 [String] 或 nil</li>
+      <li>说明：安全读取文件</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::FileUtils.mkdir_p(path)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">path</code> [String]</li>
+      <li>返回：无</li>
+      <li>说明：目录不存在时自动创建</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilscryptoutils">Kutils::CryptoUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::CryptoUtils.md5(str)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">str</code> [String]</li>
+      <li>返回：MD5 十六进制摘要 [String]</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::CryptoUtils.hmac_sha256(data, key)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">data</code> [String], <code class="language-plaintext highlighter-rouge">key</code> [String]</li>
+      <li>返回：HMAC-SHA256 十六进制摘要 [String]</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::CryptoUtils.base64_encode(str)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">str</code> [String]</li>
+      <li>返回：Base64 编码字符串 [String]</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsarrayutils">Kutils::ArrayUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::ArrayUtils.deep_flatten(arr)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">arr</code> [Array]</li>
+      <li>返回：扁平化数组 [Array]</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::ArrayUtils.safe_map(arr) { |item| ... }</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">arr</code> [Array, nil]</li>
+      <li>返回：映射后的数组 [Array]</li>
+      <li>说明：nil 时返回空数组</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsvalidator">Kutils::Validator</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::Validator.required?(val)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">val</code> [Object]</li>
+      <li>返回：是否非空 [Boolean]</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::Validator.email?(val)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">val</code> [String]</li>
+      <li>返回：是否为合法邮箱 [Boolean]</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsdebugutils">Kutils::DebugUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::DebugUtils.log(obj, label = nil)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">obj</code> [Object], <code class="language-plaintext highlighter-rouge">label</code> [String, nil]</li>
+      <li>返回：无</li>
+      <li>说明：结构化打印对象</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsdslbuilder">Kutils::DSLBuilder</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::DSLBuilder.new { ... }</code>
+    <ul>
+      <li>用法：Kutils::DSLBuilder.new do; task(‘name’) { … }; end</li>
+      <li>说明：自定义 DSL 配置</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">task(name) { ... }</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">name</code> [String]</li>
+      <li>返回：无</li>
+      <li>说明：定义并执行任务</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsformatutils">Kutils::FormatUtils</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::FormatUtils.markdown_title(title)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">title</code> [String]</li>
+      <li>返回：Markdown 标题字符串 [String]</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::FormatUtils.color_text(text, color)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">text</code> [String], <code class="language-plaintext highlighter-rouge">color</code> [Symbol]</li>
+      <li>返回：带 ANSI 颜色码的字符串 [String]</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::FormatUtils.color_code(color)</code>
+    <ul>
+      <li>参数：<code class="language-plaintext highlighter-rouge">color</code> [Symbol]</li>
+      <li>返回：ANSI 颜色码 [Integer]</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="kutilsversion">Kutils::VERSION</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Kutils::VERSION</code>
+    <ul>
+      <li>返回：当前库版本号 [String]</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name></name></author><category term="wiki" /><summary type="html"><![CDATA[API 参考]]></summary></entry><entry><title type="html">用法示例 USAGE</title><link href="/kutils/docs/wiki/2025/07/07/usage/" rel="alternate" type="text/html" title="用法示例 USAGE" /><published>2025-07-07T04:00:00+00:00</published><updated>2025-07-07T04:00:00+00:00</updated><id>/kutils/docs/wiki/2025/07/07/usage</id><content type="html" xml:base="/kutils/docs/wiki/2025/07/07/usage/"><![CDATA[<h1 id="kutils-用法示例">Kutils 用法示例</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#kutils-用法示例" id="markdown-toc-kutils-用法示例">Kutils 用法示例</a>    <ul>
+      <li><a href="#1-字符串处理-kutilsstringutils" id="markdown-toc-1-字符串处理-kutilsstringutils">1. 字符串处理 Kutils::StringUtils</a></li>
+      <li><a href="#2-时间处理-kutilstimeutils" id="markdown-toc-2-时间处理-kutilstimeutils">2. 时间处理 Kutils::TimeUtils</a></li>
+      <li><a href="#3-文件与路径处理-kutilsfileutils" id="markdown-toc-3-文件与路径处理-kutilsfileutils">3. 文件与路径处理 Kutils::FileUtils</a></li>
+      <li><a href="#4-加解密签名-kutilscryptoutils" id="markdown-toc-4-加解密签名-kutilscryptoutils">4. 加解密/签名 Kutils::CryptoUtils</a></li>
+      <li><a href="#5-数组hash-工具-kutilsarrayutils" id="markdown-toc-5-数组hash-工具-kutilsarrayutils">5. 数组/Hash 工具 Kutils::ArrayUtils</a></li>
+      <li><a href="#6-验证工具-kutilsvalidator" id="markdown-toc-6-验证工具-kutilsvalidator">6. 验证工具 Kutils::Validator</a></li>
+      <li><a href="#7-调试日志-kutilsdebugutils" id="markdown-toc-7-调试日志-kutilsdebugutils">7. 调试/日志 Kutils::DebugUtils</a></li>
+      <li><a href="#8-dsl-支持-kutilsdslbuilder" id="markdown-toc-8-dsl-支持-kutilsdslbuilder">8. DSL 支持 Kutils::DSLBuilder</a></li>
+      <li><a href="#9-格式化输出-kutilsformatutils" id="markdown-toc-9-格式化输出-kutilsformatutils">9. 格式化输出 Kutils::FormatUtils</a></li>
+      <li><a href="#10-版本号" id="markdown-toc-10-版本号">10. 版本号</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>本文件展示 Kutils 各工具模块的典型用法，便于开发者快速集成与测试。</p>
+
+<hr />
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'kutils'</span>
+</code></pre></div></div>
+
+<h2 id="1-字符串处理-kutilsstringutils">1. 字符串处理 Kutils::StringUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">StringUtils</span><span class="p">.</span><span class="nf">camelize</span><span class="p">(</span><span class="s1">'hello_world'</span><span class="p">)</span> <span class="c1"># =&gt; HelloWorld</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">StringUtils</span><span class="p">.</span><span class="nf">underscore</span><span class="p">(</span><span class="s1">'HelloWorld'</span><span class="p">)</span> <span class="c1"># =&gt; hello_world</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">StringUtils</span><span class="p">.</span><span class="nf">slugify</span><span class="p">(</span><span class="s1">'Hello Ruby!'</span><span class="p">)</span>   <span class="c1"># =&gt; hello-ruby</span>
+</code></pre></div></div>
+
+<h2 id="2-时间处理-kutilstimeutils">2. 时间处理 Kutils::TimeUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">TimeUtils</span><span class="p">.</span><span class="nf">now_iso8601</span> <span class="c1"># =&gt; 2025-01-01T12:00:00Z</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">TimeUtils</span><span class="p">.</span><span class="nf">human_duration</span><span class="p">(</span><span class="mi">3661</span><span class="p">)</span> <span class="c1"># =&gt; 01:01:01</span>
+</code></pre></div></div>
+
+<h2 id="3-文件与路径处理-kutilsfileutils">3. 文件与路径处理 Kutils::FileUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">File</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s1">'foo.txt'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">FileUtils</span><span class="p">.</span><span class="nf">safe_read</span><span class="p">(</span><span class="s1">'foo.txt'</span><span class="p">)</span> <span class="c1"># =&gt; bar</span>
+<span class="no">Kutils</span><span class="o">::</span><span class="no">FileUtils</span><span class="p">.</span><span class="nf">mkdir_p</span><span class="p">(</span><span class="s1">'tmp/data'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="4-加解密签名-kutilscryptoutils">4. 加解密/签名 Kutils::CryptoUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">CryptoUtils</span><span class="p">.</span><span class="nf">md5</span><span class="p">(</span><span class="s1">'abc'</span><span class="p">)</span> <span class="c1"># =&gt; 900150983cd24fb0d6963f7d28e17f72</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">CryptoUtils</span><span class="p">.</span><span class="nf">hmac_sha256</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="s1">'key'</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">CryptoUtils</span><span class="p">.</span><span class="nf">base64_encode</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">)</span> <span class="c1"># =&gt; aGVsbG8=</span>
+</code></pre></div></div>
+
+<h2 id="5-数组hash-工具-kutilsarrayutils">5. 数组/Hash 工具 Kutils::ArrayUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">ArrayUtils</span><span class="p">.</span><span class="nf">deep_flatten</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">]],</span> <span class="mi">4</span><span class="p">]).</span><span class="nf">inspect</span> <span class="c1"># =&gt; [1, 2, [3], 4]</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">ArrayUtils</span><span class="p">.</span><span class="nf">safe_map</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">}</span> <span class="c1"># =&gt; [2, 4]</span>
+</code></pre></div></div>
+
+<h2 id="6-验证工具-kutilsvalidator">6. 验证工具 Kutils::Validator</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">Validator</span><span class="p">.</span><span class="nf">required?</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">)</span> <span class="c1"># =&gt; true</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">Validator</span><span class="p">.</span><span class="nf">email?</span><span class="p">(</span><span class="s1">'foo@bar.com'</span><span class="p">)</span> <span class="c1"># =&gt; true</span>
+</code></pre></div></div>
+
+<h2 id="7-调试日志-kutilsdebugutils">7. 调试/日志 Kutils::DebugUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Kutils</span><span class="o">::</span><span class="no">DebugUtils</span><span class="p">.</span><span class="nf">log</span><span class="p">({</span><span class="ss">foo: </span><span class="mi">1</span><span class="p">},</span> <span class="s1">'test'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="8-dsl-支持-kutilsdslbuilder">8. DSL 支持 Kutils::DSLBuilder</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Kutils</span><span class="o">::</span><span class="no">DSLBuilder</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+  <span class="n">task</span><span class="p">(</span><span class="s1">'deploy'</span><span class="p">)</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s1">'Deploying...'</span> <span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h2 id="9-格式化输出-kutilsformatutils">9. 格式化输出 Kutils::FormatUtils</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">FormatUtils</span><span class="p">.</span><span class="nf">markdown_title</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">)</span> <span class="c1"># =&gt; "# Hello\n\n"</span>
+<span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">FormatUtils</span><span class="p">.</span><span class="nf">color_text</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">,</span> <span class="ss">:red</span><span class="p">)</span> <span class="c1"># =&gt; 带红色的 foo</span>
+</code></pre></div></div>
+
+<h2 id="10-版本号">10. 版本号</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">puts</span> <span class="no">Kutils</span><span class="o">::</span><span class="no">VERSION</span> <span class="c1"># =&gt; "0.1.0"</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="wiki" /><summary type="html"><![CDATA[Kutils 用法示例]]></summary></entry></feed>
