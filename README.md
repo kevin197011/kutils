@@ -10,7 +10,7 @@
 ## 📚 文档导航
 
 - [API 文档（YARD，Ruby 源码自动生成）](https://kevin197011.github.io/kutils/yardoc/)
-- [技术文档（Markdown，Jekyll 极客风格）](https://kevin197011.github.io/kutils/docs/)
+- [技术文档（Markdown，Jekyll ）](https://kevin197011.github.io/kutils/docs/)
 
 ---
 

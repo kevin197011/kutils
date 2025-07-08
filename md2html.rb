@@ -10,7 +10,7 @@ require 'kramdown'
 require 'rouge'
 require 'rouge/plugins/redcarpet'
 
-# 极客风格 CSS
+#  CSS
 GEEK_CSS = <<~CSS
   body {
     background: #181a1b;
@@ -87,7 +87,7 @@ markdown = File.read(input)
 # Kramdown + Rouge 渲染
 html = Kramdown::Document.new(markdown, input: 'GFM', syntax_highlighter: 'rouge').to_html
 
-# 包裹极客风格 HTML
+# 包裹 HTML
 result = <<~HTML
   <!DOCTYPE html>
   <html lang="zh-CN">
