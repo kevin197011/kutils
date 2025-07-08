@@ -1,34 +1,34 @@
 ---
 layout: default
-title: kutils 技术文档
+title: kutils Wiki
 ---
 
-# kutils 技术文档
+# kutils Wiki
 
->  · Ruby 工具库
+> Ruby 极客工具库 · 技术文档
 
 ---
 
-## 快速导航
+## 📚 目录
 
-- [用法示例 USAGE](USAGE.md)
-- [API 参考 API](API.md)
-- [返回项目首页](https://github.com/kevin197011/kutils)
+* [用法示例 USAGE](USAGE)
+* [API 参考 API](API)
+* [返回项目首页](https://github.com/kevin197011/kutils)
 
 ---
 
 ## 主要模块
 
-- StringUtils
-- TimeUtils
-- FileUtils
-- CryptoUtils
-- ArrayUtils
-- Validator
-- DebugUtils
-- DSLBuilder
-- FormatUtils
+- [StringUtils](API#kutilsstringutils)
+- [TimeUtils](API#kutilstimeutils)
+- [FileUtils](API#kutilsfileutils)
+- [CryptoUtils](API#kutilscryptoutils)
+- [ArrayUtils](API#kutilsarrayutils)
+- [Validator](API#kutilsvalidator)
+- [DebugUtils](API#kutilsdebugutils)
+- [DSLBuilder](API#kutilsdslbuilder)
+- [FormatUtils](API#kutilsformatutils)
 
 ---
 
-如需反馈或贡献，请前往 [GitHub 项目](https://github.com/kevin197011/kutils) 提 Issue 或 PR。
+*自动生成目录见页面右侧（或移动端顶部）*

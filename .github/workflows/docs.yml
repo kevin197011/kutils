@@ -20,14 +20,14 @@ jobs:
       - name: Build YARD API docs
         run: |
           bundle exec yard doc --output-dir public
-      # - name: Build Jekyll Markdown docs
-      #   run: |
-      #     bundle config set --local path 'vendor/bundle'
-      #     gem install jekyll bundler
-      #     cd docs
-      #     bundle install
-      #     bundle exec jekyll build -d ../public/docs
-      #     cd ..
+      - name: Build Jekyll Markdown docs
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          gem install jekyll bundler
+          cd docs
+          bundle install
+          bundle exec jekyll build -d ../public/docs
+          cd ..
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
