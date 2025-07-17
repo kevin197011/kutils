@@ -1,14 +1,19 @@
-<aside class="vp-sidebar">
-  <nav>
-    {% for section in site.data.sidebar %}
-      <div class="vp-sidebar-section">
-        <div class="vp-sidebar-title">{{ section.title }}</div>
-        <ul>
-          {% for item in section.items %}
-            <li><a href="{{ item.link }}">{{ item.text }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
+{% assign group_name = page.sidebar_group | default: '指南' %}
+{% assign sidebar = site.data.sidebar | where: 'group', group_name | first %}
+{% if sidebar and sidebar.items and sidebar.items.size > 0 %}
+<aside class="kdoc-sidebar hidden md:flex flex-col h-[calc(100vh-4rem)] w-64 bg-white border-r border-gray-200 text-gray-900 fixed top-16 left-0 z-40">
+  <nav class="flex-1 px-6 py-8 space-y-2">
+    {% for item in sidebar.items %}
+      {% if item.title and item.url %}
+      <a href="{{ item.url | relative_url }}" class="flex items-center px-4 py-3 rounded-lg transition font-semibold text-lg gap-3 {% if page.url == item.url %}bg-[#cc342d] text-white{% else %}hover:bg-[#fbeaea] text-gray-900{% endif %}">
+        <i class="fa-solid fa-file-lines text-xl {% if page.url == item.url %}text-white{% else %}text-[#cc342d]{% endif %}"></i>
+        <span>{{ item.title }}</span>
+      </a>
+      {% endif %}
     {% endfor %}
   </nav>
+  <div class="px-6 mt-auto flex flex-col items-start">
+    <div class="text-xs text-gray-400 mb-6 mt-8">&copy; {{ site.time | date: '%Y' }} Kdoc 风格文档主题 · Powered by Jekyll & KDoc</div>
+  </div>
 </aside>
+{% endif %}

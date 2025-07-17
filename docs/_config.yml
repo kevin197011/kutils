@@ -1,19 +1,7 @@
-title: kutils Wiki
-baseurl: "/kutils/docs"
+title: Kdoc 风格文档主题
 markdown: kramdown
 permalink: pretty
-theme: null
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-gist
-exclude: ["yardoc", "Gemfile", "Gemfile.lock"]
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  hard_wrap: false
-  auto_ids: true
-  toc_levels: 1..3
-show_downloads: false
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/

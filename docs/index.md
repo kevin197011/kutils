@@ -1,44 +1,14 @@
 ---
 layout: default
-title: kutils Wiki
+title: 首页
 ---
 
-# kutils Wiki
+# 欢迎使用 KDoc 项目文档主题
 
-> Ruby 极客工具库 · 技术文档
+KDoc 是一款极简 Ruby 官网风格、支持顶部导航和分组菜单的 Jekyll 主题，适合企业/开源项目文档。
 
----
+- [快速开始](/guide/)
+- [API 文档](/api/)
+- [插件扩展](/guide/plugins/)
 
-## 📚 主要导航
-
-- [用法示例 USAGE](/kutils/docs/USAGE)
-- [API 参考 API](/kutils/docs/API)
-- [返回项目首页](https://github.com/kevin197011/kutils)
-
----
-
-## 主要模块
-
-- [StringUtils](/kutils/docs/API#kutilsstringutils)
-- [TimeUtils](/kutils/docs/API#kutilstimeutils)
-- [FileUtils](/kutils/docs/API#kutilsfileutils)
-- [CryptoUtils](/kutils/docs/API#kutilscryptoutils)
-- [ArrayUtils](/kutils/docs/API#kutilsarrayutils)
-- [Validator](/kutils/docs/API#kutilsvalidator)
-- [DebugUtils](/kutils/docs/API#kutilsdebugutils)
-- [DSLBuilder](/kutils/docs/API#kutilsdslbuilder)
-- [FormatUtils](/kutils/docs/API#kutilsformatutils)
-
----
-
-## 📝 最新文档
-
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: '%Y-%m-%d' }}</small></li>
-  {% endfor %}
-</ul>
-
----
-
-*自动生成目录见页面右侧（或移动端顶部）*
+点击左侧菜单或顶部导航查看更多内容。

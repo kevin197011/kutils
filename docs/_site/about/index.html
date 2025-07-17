@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>关于 | Kdoc 风格文档主题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ruby: '#cc342d',
+              'ruby-dark': '#a52822',
+              'ruby-light': '#fbeaea',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-ruby.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+    <script src="/assets/js/kdoc.js" defer></script>
+    <style>
+      /* 代码块美化，兼容 Prism 高亮 */
+      .kdoc-content {
+        max-width: 700px;
+      }
+      .kdoc-content pre, .kdoc-content table {
+        overflow-x: auto;
+        max-width: 100%;
+      }
+      .kdoc-content pre {
+        border-radius: 0.5rem;
+        background: #fff;
+        color: #232136;
+        font-size: 0.95em;
+        padding: 1.1em 1em;
+        margin: 1.5em 0;
+        border: 1px solid #e5e7eb;
+      }
+      .kdoc-content code {
+        font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+        font-size: 0.95em;
+        color: #cc342d;
+        background: none !important;
+        border: none !important;
+        padding: 0 0.1em;
+        box-shadow: none !important;
+      }
+      .kdoc-content pre code {
+        background: none !important;
+        padding: 0 !important;
+        color: inherit;
+      }
+      .kdoc-content code::before,
+      .kdoc-content code::after {
+        content: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen">
+    <header class="kdoc-header w-full bg-[#cc342d] text-white fixed top-0 left-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+    <a href="/" class="flex items-center font-extrabold text-xl text-white">
+      <i class="fa-solid fa-gem mr-2 text-2xl"></i>Kdoc 风格文档主题
+    </a>
+    <nav class="flex-1 flex items-center justify-center space-x-6">
+      
+        <a href="/" class="text-white hover:text-white border-b-2 border-transparent hover:border-white font-medium transition pb-0.5">
+          首页
+        </a>
+      
+        <a href="/guide/" class="text-white hover:text-white border-b-2 border-transparent hover:border-white font-medium transition pb-0.5">
+          指南
+        </a>
+      
+        <a href="/api/" class="text-white hover:text-white border-b-2 border-transparent hover:border-white font-medium transition pb-0.5">
+          API
+        </a>
+      
+        <a href="/about/" class="text-white hover:text-white border-b-2 border-transparent hover:border-white font-medium transition pb-0.5">
+          关于
+        </a>
+      
+    </nav>
+  </div>
+</header>
+<div class="h-16"></div>
+
+    <div class="flex min-h-screen pt-16">
+      
+      <main class="flex-1 ml-0 md:ml-64 flex flex-col items-center justify-start py-12 px-4 md:px-0 transition-all duration-200">
+        <div class="kdoc-content prose prose-neutral w-full max-w-3xl min-w-0 bg-white rounded-2xl shadow-lg p-8 md:p-12 min-h-[70vh] border border-gray-200" style="max-width: 700px;">
+          <h1 id="关于-kdoc-风格文档主题">关于 KDoc 风格文档主题</h1>
+
+<p>KDoc 是一款极简、现代、Ruby 官网色调的 Jekyll 文档主题，适用于企业/开源项目文档、API 文档、团队知识库等场景。</p>
+
+<h2 id="主题特性">主题特性</h2>
+<ul>
+  <li>顶部导航栏，支持多入口</li>
+  <li>左侧分组菜单，支持多模块文档</li>
+  <li>右侧目录（TOC），自动生成</li>
+  <li>代码高亮，支持多种语言</li>
+  <li>响应式设计，适配桌面和移动端</li>
+  <li>极简 Ruby 红色调，现代卡片风格</li>
+</ul>
+
+<h2 id="适用场景">适用场景</h2>
+<ul>
+  <li>项目/开源文档</li>
+  <li>API/SDK 文档</li>
+  <li>团队知识库</li>
+  <li>DevOps/运维平台文档</li>
+</ul>
+
+<h2 id="联系方式">联系方式</h2>
+<p>如需定制、反馈或合作，欢迎联系：</p>
+<ul>
+  <li>GitHub Issue</li>
+  <li>邮箱：your@email.com</li>
+</ul>
+
+<hr />
+<p>感谢使用 KDoc 风格文档主题！</p>
+
+        </div>
+        <nav class="kdoc-toc hidden xl:block fixed right-8 top-24 w-64 bg-white border border-gray-200 rounded-xl shadow-lg p-5 max-h-[60vh] overflow-auto z-50">
+  <h3 class="text-xs font-bold text-gray-500 mb-3 tracking-widest">目录</h3>
+  <ul id="toc-list" class="space-y-2"></ul>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toc = document.getElementById('toc-list');
+  if (!toc) return;
+  const headers = document.querySelectorAll('.max-w-3xl h2, .max-w-3xl h3');
+  headers.forEach(h => {
+    const li = document.createElement('li');
+    li.className = h.tagName.toLowerCase();
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.className = h.tagName === 'H2' ? 'text-[#cc342d] font-semibold hover:underline' : 'ml-6 text-gray-600 hover:text-[#cc342d]';
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+});
+</script>
+      </main>
+      
+        
+
+    </div>
+  </body>
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.Prism) {
+    Prism.highlightAll();
+  }
+});
+</script>

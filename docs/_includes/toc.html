@@ -1,4 +1,21 @@
-<nav class="vp-toc" id="vp-toc">
-  <div class="vp-toc-title">目录</div>
-  <ul id="toc-list"></ul>
+<nav class="kdoc-toc hidden xl:block fixed right-8 top-24 w-64 bg-white border border-gray-200 rounded-xl shadow-lg p-5 max-h-[60vh] overflow-auto z-50">
+  <h3 class="text-xs font-bold text-gray-500 mb-3 tracking-widest">目录</h3>
+  <ul id="toc-list" class="space-y-2"></ul>
 </nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toc = document.getElementById('toc-list');
+  if (!toc) return;
+  const headers = document.querySelectorAll('.max-w-3xl h2, .max-w-3xl h3');
+  headers.forEach(h => {
+    const li = document.createElement('li');
+    li.className = h.tagName.toLowerCase();
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.className = h.tagName === 'H2' ? 'text-[#cc342d] font-semibold hover:underline' : 'ml-6 text-gray-600 hover:text-[#cc342d]';
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+});
+</script>

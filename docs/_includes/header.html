@@ -1,11 +1,15 @@
-<header class="vp-header">
-  <div class="vp-header-inner">
-    <a class="vp-logo" href="{{ '/' | relative_url }}">kutils</a>
-    <nav class="vp-nav">
+<header class="kdoc-header w-full bg-[#cc342d] text-white fixed top-0 left-0 z-50 shadow">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+    <a href="{{ '/' | relative_url }}" class="flex items-center font-extrabold text-xl text-white">
+      <i class="fa-solid fa-gem mr-2 text-2xl"></i>{{ site.title }}
+    </a>
+    <nav class="flex-1 flex items-center justify-center space-x-6">
       {% for item in site.data.nav %}
-        <a href="{{ item.link }}">{{ item.text }}</a>
+        <a href="{{ item.url | relative_url }}" class="text-white hover:text-white border-b-2 border-transparent hover:border-white font-medium transition pb-0.5">
+          {{ item.title }}
+        </a>
       {% endfor %}
     </nav>
-    <button class="vp-theme-toggle" id="theme-toggle" title="切换主题">🌓</button>
   </div>
 </header>
+<div class="h-16"></div>

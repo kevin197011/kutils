@@ -1,32 +1,14 @@
-- title: 快速入门
+- group: 指南
   items:
-    - text: 用法示例
-      link: /kutils/docs/USAGE
-    - text: API 参考
-      link: /kutils/docs/API
-- title: 模块
+    - title: 快速开始
+      url: /guide/
+    - title: 配置
+      url: /guide/config/
+    - title: 插件
+      url: /guide/plugins/
+- group: API
   items:
-    - text: StringUtils
-      link: /kutils/docs/API#kutilsstringutils
-    - text: TimeUtils
-      link: /kutils/docs/API#kutilstimeutils
-    - text: FileUtils
-      link: /kutils/docs/API#kutilsfileutils
-    - text: CryptoUtils
-      link: /kutils/docs/API#kutilscryptoutils
-    - text: ArrayUtils
-      link: /kutils/docs/API#kutilsarrayutils
-    - text: Validator
-      link: /kutils/docs/API#kutilsvalidator
-    - text: DebugUtils
-      link: /kutils/docs/API#kutilsdebugutils
-    - text: DSLBuilder
-      link: /kutils/docs/API#kutilsdslbuilder
-    - text: FormatUtils
-      link: /kutils/docs/API#kutilsformatutils
-- title: 文档
-  items:
-    - text: 归档
-      link: /kutils/docs/archive.html
-    - text: 最新文章
-      link: /kutils/docs/
+    - title: API 概览
+      url: /api/
+    - title: 示例接口
+      url: /api/example/

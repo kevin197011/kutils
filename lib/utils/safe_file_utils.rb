@@ -5,14 +5,13 @@
 # https://opensource.org/licenses/MIT
 
 module Kutils
-  # FileUtils provides safe file and directory operations.
-  # ⚠️ 注意：如与 Ruby 标准库 FileUtils 冲突，可改名为 SafeFileUtils。
-  module FileUtils
+  # SafeFileUtils provides safe file and directory operations.
+  module SafeFileUtils
     # Safely read file content if file exists
     # @param path [String]
     # @return [String, nil]
     # @example
-    #   Kutils::FileUtils.safe_read('foo.txt')
+    #   Kutils::SafeFileUtils.safe_read('foo.txt')
     def self.safe_read(path)
       File.exist?(path) ? File.read(path) : nil
     end
@@ -21,7 +20,7 @@ module Kutils
     # @param path [String]
     # @return [void]
     # @example
-    #   Kutils::FileUtils.mkdir_p('tmp/data')
+    #   Kutils::SafeFileUtils.mkdir_p('tmp/data')
     def self.mkdir_p(path)
       Dir.mkdir(path) unless Dir.exist?(path)
     end
